@@ -12,20 +12,20 @@ See lab topology diagram
 
 #### Lab Requirements
 
-* Basic Switch Parameters
+1 Basic Switch Parameters
   * Each switch should be assigned a hostname as per the topology diagram
   * Each switch should be configured an IP address on the management VLAN as per the topology diagram
   * Each switch should be configured with an enable secret 
   * VTY lines on all switches should be configured to allow remote access from other network devices using password of 'cisco'
 
-* VTP Configuration
+2 VTP Configuration
   * The distribution layer switches should be configured as the VTP servers
   * The access layer switches should be VTP clients
   * All switches should be in the VTP domain "SWLAB"
   * All switches shol dbe running VTP version 2
   * To restrict flooded traffic on the trunk links, VLAN traffic should be limited between switches in the VTP domain for any VLANs that are not defined 
 
-* VLAN configuration
+3 VLAN configuration
   * As per the topology diagram, VLANs 100, 110, and 120 are required
   * The VLANs should be named as:
      * VLAN 100 = Server-Farm-1
@@ -33,7 +33,7 @@ See lab topology diagram
      * VLAN 120 = Net-Eng
   * The switch connected to the hosts as per the topology diagram shoul dbe configured as static access ports
 
-* Trunking Configuration
+4 Trunking Configuration
   * ISL and 802.1Q trunking should be configured on switches as per the topology diagram
   * All trunk links should be configured statically 
   * To prevent possible security issues, DTP should be disable on all trunk links on all switches
