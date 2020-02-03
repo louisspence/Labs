@@ -1,1 +1,20 @@
 
+!
+enable
+!
+configure terminal
+!
+vlan 100
+  name ServerFarm-1
+!
+vlan 110
+  name Server-Farm-2
+!
+vlan 120
+  name Net-Eng
+!
+!
+!
+interface fastethernet 0/6
+  switchprot access vlan 100
+!
