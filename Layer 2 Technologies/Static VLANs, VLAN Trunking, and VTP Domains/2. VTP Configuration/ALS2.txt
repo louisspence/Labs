@@ -1,0 +1,8 @@
+
+!
+enable
+!
+configure terminal
+!
+vtp mode client
+!
