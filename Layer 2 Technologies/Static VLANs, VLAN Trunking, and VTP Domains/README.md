@@ -43,7 +43,7 @@ See lab topology diagram
 
 #### Commands Required for Lab
 
-### Configuration Commands
+##### Configuration Commands
 
 * enable
 * configure terminal
@@ -70,7 +70,7 @@ See lab topology diagram
 * name *name*
 * state {active | suspend
 
-### Verification Commands
+##### Verification Commands
 
 * show vlan
 * show vlan brief
