@@ -1,6 +1,7 @@
 
 #### Lab Topology
 
+See lab topology diagram
 
 #### Lab Objectives
 
@@ -11,7 +12,7 @@
 
 #### Lab Requirements
 
-*Basic Switch Parameters
+* Basic Switch Parameters
   * Each switch should be assigned a hostname as per the topology diagram
   * Each switch should be configured an IP address on the management VLAN as per the topology diagram
   * Each switch should be configured with an enable secret 
@@ -46,29 +47,28 @@
 
 * enable
 * configure terminal
-* hostname name
-* interface vlan-id
-* ip address ip-address
+* hostname *name*
+* interface *vlan-id*
+* ip address *ip-address*
 * [no] shutdown
-* enable secret password
-* line vty number
-* password password
+* enable secret *password*
+* line *vty number*
+* password *password*
 * login
-* vtp domain name
+* vtp domain *domain-name*
 * vtp version {1 | 2 | 3}
 * vtp mode {server | client}
 * switchport mode {trunk | access}
-* switchport access vlan-id
+* switchport access *vlan-id*
 * switchport trunk encapsulation {dot1q | isl}
-* interface range 
-* switch nonnegotiate
-* switchport trunk allowed vlan vlan-id
-* switchport trunk native vlan vlan-id
+* interface range *interfaces* 
+* switchport nonnegotiate
+* switchport trunk allowed vlan *vlan-id*
+* switchport trunk native vlan *vlan-id*
 * vtp pruning
-* vlan vlan-id
-* name name
-* state suspend
-* state active
+* vlan *vlan-id*
+* name *name*
+* state {active | suspend
 
 ### Verification Commands
 
@@ -78,7 +78,6 @@
 * show interfaces switchport
 * show interfaces trunk
 * show running-config 
-
 
 #### Additional Information
 
