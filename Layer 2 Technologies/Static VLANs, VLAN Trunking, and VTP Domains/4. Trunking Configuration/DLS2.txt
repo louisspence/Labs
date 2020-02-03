@@ -10,7 +10,6 @@ interface range fastethernet 0/7 - 10
   switchport trunk allowed vlans 100, 110,120
   switchport trunk native vlan 1
   switchport nonnegotiate
-  vtp pruning
 !
 interface range fastethernet 0/11 - 12
   switchport trunk encapsulation isl
@@ -18,7 +17,6 @@ interface range fastethernet 0/11 - 12
   switchport trunk allowed vlans 100, 110,120
   switchport trunk native vlan 1
   switchport nonnegotiate
-  vtp pruning
 !
 
   
