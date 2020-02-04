@@ -3,11 +3,17 @@
 
 See lab topology diagram
 
+
 #### Lab Objectives
 
 * Setup a VTP Domain
 * Create and maintain VLANs
 * Configure ISL and 802.1Q Trunking
+
+#### Required Resources
+
+* EVE-NG Pro
+* Cisco IOL "i86bi-linux-l2-adventerprisek9-15.bin" image
 
 
 #### Lab Requirements
@@ -42,45 +48,5 @@ See lab topology diagram
      * VLAN 120 = Net-Eng
   * The switch connected to the hosts as per the topology diagram should be configured as static access ports
 
-
-
-
-#### Commands Required for Lab
-
-##### Configuration Commands
-
-* enable
-* configure terminal
-* hostname *name*
-* interface *vlan-id*
-* ip address *ip-address*
-* [no] shutdown
-* enable secret *password*
-* line *vty number*
-* password *password*
-* login
-* vtp domain *domain-name*
-* vtp version {1 | 2 | 3}
-* vtp mode {server | client}
-* switchport mode {trunk | access}
-* switchport access *vlan-id*
-* switchport trunk encapsulation {dot1q | isl}
-* interface range *interfaces*
-* switchport nonnegotiate
-* switchport trunk allowed vlan *vlan-id*
-* switchport trunk native vlan *vlan-id*
-* vtp pruning
-* vlan *vlan-id*
-* name *name*
-* state {active | suspend
-
-##### Verification Commands
-
-* show vlan
-* show vlan brief
-* show vtp status
-* show interfaces switchport
-* show interfaces trunk
-* show running-config
 
 #### Additional Information

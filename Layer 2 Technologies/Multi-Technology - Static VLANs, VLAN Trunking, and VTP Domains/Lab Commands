@@ -1,0 +1,36 @@
+
+##### Configuration Commands
+
+* enable
+* configure terminal
+* hostname *name*
+* interface *vlan-id*
+* ip address *ip-address*
+* [no] shutdown
+* enable secret *password*
+* line *vty number*
+* password *password*
+* login
+* vtp domain *domain-name*
+* vtp version {1 | 2 | 3}
+* vtp mode {server | client}
+* switchport mode {trunk | access}
+* switchport access *vlan-id*
+* switchport trunk encapsulation {dot1q | isl}
+* interface range *interfaces*
+* switchport nonegotiate
+* switchport trunk allowed vlan *vlan-id*
+* switchport trunk native vlan *vlan-id*
+* vtp pruning
+* vlan *vlan-id*
+* name *name*
+* state {active | suspend
+
+##### EXEC Commands
+
+* show vlan
+* show vlan brief
+* show vtp status
+* show interfaces switchport
+* show interfaces trunk
+* show running-config

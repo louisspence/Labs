@@ -34,7 +34,7 @@ interface fa0/11
 interface fa0/12
   description (Trunk Link to ALS1 Fa0/12)
 !
-Add interfaces and description
+!
 !
 enable secret cisco
 !
