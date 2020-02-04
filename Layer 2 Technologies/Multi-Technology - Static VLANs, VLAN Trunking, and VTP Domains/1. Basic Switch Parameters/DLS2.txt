@@ -12,15 +12,9 @@ interface VLAN 1
 !
 !
 !
-enable secret cisco 
+enable secret cisco
 !
 line vty 0 15
   password cisco
-  login 
-!
-!
-!
-vtp mode server
-vtp version 2
-vtp domain SWLAB
+  login
 !
