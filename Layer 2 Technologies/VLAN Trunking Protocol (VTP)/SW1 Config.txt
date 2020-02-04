@@ -1,0 +1,52 @@
+
+!
+enable
+!
+vtp primary
+!
+config terminal
+!
+hostname SW1
+!
+!
+!
+vtp version 3
+vtp domain lms.lab.com
+vtp mode server
+vtp password password123
+!
+!
+!
+vlan 10
+  name Prod
+!
+vlan 20
+  name Pre-Prod
+!
+vlan 30
+  name Sales
+!
+vlan 40
+  name Accounts
+!
+!
+!
+interface vlan 1
+  ip address 192.168.1.1 255.255.255.0
+  no shutdown
+!
+interface gigabitethernet 3/2
+  description (Trunk Link to SW2 - Gi3/2)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+!
+interface gigabitethernet 3/1
+  description (Trunk Link to SW3 - Gi3/1)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,40
+  switchport mode trunk
