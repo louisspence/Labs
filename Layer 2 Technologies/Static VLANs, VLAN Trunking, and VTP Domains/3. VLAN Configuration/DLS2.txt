@@ -1,9 +1,0 @@
-
-!
-enable
-!
-configure terminal
-!
-interface fastethernet 0/6
-  switchprot access vlan 110
-!

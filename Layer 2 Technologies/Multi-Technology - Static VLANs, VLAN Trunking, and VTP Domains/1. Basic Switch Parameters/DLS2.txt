@@ -1,0 +1,26 @@
+
+!
+enable
+!
+configure terminal
+!
+hostname DLS2
+!
+interface VLAN 1
+  ip address 10.1.1.102 255.255.255.0
+  no shutdown
+!
+!
+!
+enable secret cisco 
+!
+line vty 0 15
+  password cisco
+  login 
+!
+!
+!
+vtp mode server
+vtp version 2
+vtp domain SWLAB
+!

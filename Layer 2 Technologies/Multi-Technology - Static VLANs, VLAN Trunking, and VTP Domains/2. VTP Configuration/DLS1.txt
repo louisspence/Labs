@@ -1,0 +1,10 @@
+
+!
+enable
+!
+configure terminal
+!
+vtp mode server
+vtp version 2
+vtp domain SWLAB
+!
