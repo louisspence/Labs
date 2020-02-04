@@ -1,0 +1,61 @@
+
+!
+enable
+!
+config terminal
+!
+hostname SW2
+!
+!
+!
+vlan 10
+  name Prod
+!
+vlan 20
+  name Pre-Prod
+!
+vlan 30
+  name VM MGMT
+!
+!
+!
+interface vlan 1
+  ip address 192.168.1.3 255.255.255.0
+  no shutdown
+!
+interface range gigabitethernet 1/0 - 1
+  description (Prod host interface)
+  switchport
+  switchport mode access
+  switchport access vlan 10
+!
+interface range gigabitethernet 1/2 - 3
+  description (Pre-Prod host interface)
+  switchport
+  switchport mode access
+  switchport access vlan 20
+!
+interface gigabitethernet 2/0
+  description (VM MGMT host interface)
+  switchport
+  switchport mode access
+  switchport access vlan 30
+!
+interface gigabitethernet 3/3
+  description (Trunk Link to SW2 - Gi3/3)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+ !
+interface gigabitethernet 3/1
+  description (Trunk Link to SW1 - Gi3/1)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+!
+end
+

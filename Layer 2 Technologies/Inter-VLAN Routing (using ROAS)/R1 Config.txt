@@ -1,0 +1,34 @@
+ 
+!
+enable
+!
+Configure terminal
+!
+hostname R1
+!
+!
+!
+interface gigabitethernet 0/0
+  no shutdown
+!
+interface gigabitethernet 0/0.1
+  description (Management VLAN 1 SVI)
+  encapsulation dot1q 1 native
+  ip address 192.168.1.254 255.255.255.0
+!
+interface gigabitethernet 0/0.10
+  description (Prod VLAN 10 SVI)
+  encapsulation dot1q 10
+  ip address 192.168.10.254 255.255.255.0
+!
+interface gigabitethernet 0/0.20
+  description (Pre-Prod VLAN 20 SVI)
+  encapsulation dot1q 20
+  ip address 192.168.20.254 255.255.255.0
+!
+interface gigabitethernet 0/0.30
+  description (VM MGMT VLAN 30 SVI)
+  encapsulation dot1q 30
+  ip address 192.168.30.254 255.255.255.0
+!
+end
