@@ -17,6 +17,8 @@ See lab topology diagram
   * Each switch should be configured an IP address on the management VLAN as per the topology diagram
   * Each switch should be configured with an enable secret
   * VTY lines on all switches should be configured to allow remote access from other network devices using password of 'cisco'
+  * Add a meaningful descriptive name for all switch interfaces in use as per the topology diagram
+  * All other interfaces should be administratively disabled with a meaningful description
 
 2 VTP Configuration
   * The distribution layer switches should be configured as the VTP servers

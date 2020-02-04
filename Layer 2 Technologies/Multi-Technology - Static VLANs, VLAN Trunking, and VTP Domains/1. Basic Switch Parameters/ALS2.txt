@@ -12,6 +12,8 @@ interface VLAN 1
 !
 !
 !
+Add interfaces and description
+!
 enable secret cisco
 !
 line vty 0 15
