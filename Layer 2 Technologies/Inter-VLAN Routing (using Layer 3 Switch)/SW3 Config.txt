@@ -1,0 +1,41 @@
+
+!
+enable
+!
+config terminal
+!
+hostname SW3
+!
+!
+!
+vlan 10
+  name Prod
+!
+vlan 20
+  name Pre-Prod
+!
+vlan 30
+  name VM MGMT
+!
+!
+!
+interface vlan 1
+  ip address 10.1.1.3 255.255.255.0
+  no shutdown
+!
+interface gigabitethernet 0/0
+  description (ESXi Interface)
+  switchport
+  switchport mode access
+  switchport access vlan 30
+!
+interface gigabitethernet 3/1
+  description (Trunk Link to SW1 - Gi3/1)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+!
+end
+

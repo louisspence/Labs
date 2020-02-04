@@ -1,0 +1,70 @@
+
+!
+enable
+!
+config terminal
+!
+hostname SW1
+!
+!
+!
+vlan 10
+  name Prod
+!
+vlan 20
+  name Pre-Prod
+!
+vlan 30
+  name VM MGMT
+!
+!
+!
+interface vlan 1
+  ip address 10.1.1.1 255.255.255.0
+  no shutdown
+!
+interface vlan 10
+  description (SVI for Pord_VLAN
+  ip address 10.1.10.1
+  no shutdown
+!
+interface vlan 20
+  description (SVI for Pre-Pord_VLAN
+  ip address 10.1.20.1
+  no shutdown
+!
+interface vlan 30
+  description (SVI for VM MGMT_VLAN
+  ip address 10.1.20.1
+  no shutdown
+!
+!
+!
+interface gigabitethernet 3/1
+  no shutdown
+  description (Trunk Link to SW3 - Gi3/1)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+!
+interface gigabitethernet 3/2
+  no shutdown
+  description (Trunk Link to SW2 - Gi3/2)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+!
+interface gigabitethernet 3/3
+  no shutdown
+  description (Trunk Link to SW4 - Gi3/2)
+  switchport
+  switchport trunk encapsulation dot1q
+  switchport trunk native vlan 1
+  switchport trunk allowed vlan 10,20,30
+  switchport mode trunk
+!
+end
