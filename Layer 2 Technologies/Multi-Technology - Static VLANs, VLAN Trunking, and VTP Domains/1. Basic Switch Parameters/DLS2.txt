@@ -7,12 +7,32 @@ configure terminal
 hostname DLS2
 !
 interface VLAN 1
+  description MGMT-VLAN
   ip address 10.1.1.102 255.255.255.0
   no shutdown
 !
 !
 !
-Add interfaces and description
+interface fa0/6
+  description (Host Interface)
+!
+interface fa0/7
+  description (Trunk Link to ALS2 Fa0/7)
+!
+interface fa0/8
+  description (Trunk Link to ALS2 Fa0/8)
+!
+interface fa0/9
+  description (Trunk Link to ALS1 Fa0/9)
+!
+interface fa0/10
+  description (Trunk Link to ALS1 Fa0/10)
+!
+interface fa0/11
+  description (Trunk Link to DLS1 Fa0/11)
+!
+interface fa0/12
+  description (Trunk Link to DLS1 Fa0/12)
 !
 enable secret cisco
 !
