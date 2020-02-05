@@ -15,6 +15,6 @@ vlan 120
 !
 !
 !
-interface fastethernet 0/6
+interface ethernet 1/1
   switchport access vlan 100
 !

@@ -13,32 +13,32 @@ interface VLAN 1
 !
 !
 !
-interface fa0/6
+interface e1/1
   description (Host Interface)
 !
-interface fa0/7
+interface e1/2
   description (Trunk Link to DLS2 Fa0/7)
 !
-interface fa0/8
+interface e1/3
   description (Trunk Link to DLS2 Fa0/8)
 !
-interface fa0/9
+interface e2/0
   description (Trunk Link to DLS1 Fa0/9)
 !
-interface fa0/10
+interface e2/1
   description (Trunk Link to DLS1 Fa0/10)
 !
-interface fa0/11
+interface e2/2
   description (Trunk Link to ALS1 Fa0/11)
 !
-interface fa0/12
+interface e2/3
   description (Trunk Link to ALS1 Fa0/12)
 !
 !
 !
 enable secret cisco
 !
-line vty 0 15
+line vty 0 4
   password cisco
   login
 !
