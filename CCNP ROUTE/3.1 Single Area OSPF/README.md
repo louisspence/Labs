@@ -39,5 +39,13 @@ See lab topology diagram
   * All interface need to be in OSPF are 0
   * Using debug commands, observe OSPF by shutting down and bringing up physical links
 
-
+3 Add Loopback Interfaces to OSPF
+  * On each router, add the Loopback interfaces into the routing procss using the network command
+  * Verify these networks have been added to the routing table 
+  * Change the default network type to ensure that OSPF is advertising the actual network of the Loopbacks and not the host routes
+  * Use a Tcl script to verify connectivity to all addresses in the topology 
+  
+4 
+  
+  
 #### Additional Information
