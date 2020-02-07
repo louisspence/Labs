@@ -1,0 +1,29 @@
+
+!
+enable
+!
+configure terminal
+!
+hostname R1
+!
+interface ethernet 0/0
+  description (Link to SW1 - e0/1)
+  ip address 10.1.200.1 255.255.255.0
+  no shutdown
+!
+!
+!
+interface loopback 1
+  description (Engineering Department)
+  ip address 10.1.1.1 255.255.255.0
+!
+!
+!
+interface serial 1/0
+  description (Link to R2 - s1/0)
+  ip address 10.1.100.1 255.255.255.0
+  clock rate 64000
+  bandwidth 64
+  no shutdown
+!
+end

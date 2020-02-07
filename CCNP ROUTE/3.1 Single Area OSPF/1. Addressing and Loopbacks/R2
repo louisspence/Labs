@@ -1,0 +1,28 @@
+
+!
+enable
+!
+configure terminal
+!
+hostname R2
+!
+interface ethernet 0/0
+  description (Link to SW1 - e0/1)
+  ip address 10.1.200.2 255.255.255.0
+  no shutdown
+!
+!
+!
+interface loopback 2
+  description (Marketing Department)
+  ip address 10.1.2.1 255.255.255.0
+  !
+  !
+  !
+interface serial 1/0
+  description (Link to R2 - s1/0)
+  ip address 10.1.100.2 255.255.255.0
+  bandwidth 64
+  no shutdown
+  !
+end

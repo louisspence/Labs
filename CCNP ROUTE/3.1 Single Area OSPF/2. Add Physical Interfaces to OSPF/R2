@@ -1,0 +1,15 @@
+
+!
+enable
+!
+configure terminal
+!
+router ospf 3
+!
+interface ethernet 0/0
+  ip ospf 3 area 0
+!
+interface serial 1/0
+  ip ospf 3 area 0
+!
+end

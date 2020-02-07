@@ -1,0 +1,10 @@
+
+!
+enable
+!
+configure terminal
+!
+router ospf 3
+  network 10.1.200.0 0.0.0.255 area 0
+!
+end
