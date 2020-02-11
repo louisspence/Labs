@@ -5,6 +5,9 @@ enable
 configure terminal
 !
 router ospf 2
- network 10.2.1.0 0.0.0.255 area 0
- !
- end
+ network 10.1.2.0 0.0.0.255 area 0
+!
+interface loopback 2
+ ip ospf network point-to-point
+!
+end
