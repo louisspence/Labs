@@ -36,7 +36,7 @@ See lab topology diagram
   * Configure the OSPF process on all routers (use router number for OSPF process)
   * Add the interfaces on R1 and R3 to OSPF using the network command
   * Add the interfaces on R2 to OSPF directly on the interface
-  * All interface need to be in OSPF are 0
+  * All interface need to be in OSPF area 0
   * Using debug commands, observe OSPF by shutting down and bringing up physical links
 
 3 Add Loopback Interfaces to OSPF
@@ -46,7 +46,14 @@ See lab topology diagram
   * Use a Tcl script to verify connectivity to all addresses in the topology
 
 4 Modify OSPF Link Costs
-  *
+  * Modify the link cost on the Ethernet 0/0 interfaces between all three routers to 50
+
+5 Modify interface Priorities to Control the DR and BDR Election
+  * Currently, R3 is the DR and R2 is the BDR for the Ethernet networks based on the default interface priorities
+  * Change the OSPF priorities on R1 and R2 to make R1 the DR and R2 the BDR
+  * All other routers should become DROTHERs
 
 
 #### Additional Information
+
+* To make a router take over as DR, use the **clear ip ospf process** command on all the routers after changing the priorities

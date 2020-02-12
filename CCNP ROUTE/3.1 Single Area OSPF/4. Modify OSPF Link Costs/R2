@@ -1,0 +1,9 @@
+
+enable
+!
+configure terminal
+!
+interface ethernet 0/0
+  ip ospf cost 50
+!
+end
