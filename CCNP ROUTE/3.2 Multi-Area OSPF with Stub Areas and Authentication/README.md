@@ -22,7 +22,8 @@ See lab topology diagram
 
 #### Lab Requirements
 
-* 
+1 Configure Addressing and Loopbacks
+  * 
 
 
 #### Additional Information
