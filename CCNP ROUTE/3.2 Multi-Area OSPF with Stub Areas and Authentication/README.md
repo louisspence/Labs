@@ -23,7 +23,8 @@ See lab topology diagram
 #### Lab Requirements
 
 1 Configure Addressing and Loopbacks
-  * 
+  * Using the addressing scheme in the diagram, configure the serial interfaces on R1, R2, and R3
+  * As per the topology diagram, configure the loopback interfaces on R1, R2, and R3
 
 
 #### Additional Information
